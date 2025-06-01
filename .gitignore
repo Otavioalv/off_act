@@ -1,2 +1,5 @@
 venv
 *.img
+build
+dist
+*.spec

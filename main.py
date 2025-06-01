@@ -4,11 +4,15 @@ import subprocess
 import os
 import msvcrt
 from time import sleep
-from pywinauto import Application
-from colorama import init, Fore, Style
 
 from rich import print
 from rich.panel import Panel
+
+# criar exe
+# pyinstaller --onefile --icon=meu_icone.ico nome_do_seu_script.py
+# pyinstaller --onefile --exclude-module=difflib main.py
+
+# dimensão icone, 16, 48, 256
 
 
 def start_download(url, file_name, v):
@@ -180,6 +184,7 @@ def activate_off():
     """
     menu_text = (
         "[bright_red]ATENÇÃO[/bright_red]: Vai abrir uma janela preta chamada PowerShell.\n\n"
+        "Caso peça permição permisão do sistema, aperte a opção [bright_green]'Sim'[/bright_green]\n"
         "Nessa janela, você vai ver algumas opções numeradas.\n\n"
         "Quando a janela abrir completamente:\n"
         "\t- Aperte a tecla [bright_green]'2'[/bright_green] e depois [bright_green]'Enter'[/bright_green]. Para opção [bright_green]'Ohook'[/bright_green]\n"
